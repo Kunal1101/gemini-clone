@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { assets } from "../../assets/assets";
 
-function Sidebar() {
+const Sidebar = () => {
   const [extended, setExtended] = useState(false);
 
   return (
@@ -52,6 +52,6 @@ function Sidebar() {
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;
