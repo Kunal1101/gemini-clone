@@ -9,7 +9,7 @@ async function main(propmt) {
     model: "gemini-2.0-flash",
     contents: propmt,
   });
-  console.log(response.text);
+  return response.text;
 }
 
 export default main;
