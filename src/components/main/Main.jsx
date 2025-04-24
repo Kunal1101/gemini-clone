@@ -27,6 +27,13 @@ const Main = () => {
     },
   ];
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      onSend();
+    }
+  };
+
   const {
     onSend,
     recentPrompt,
@@ -89,6 +96,7 @@ const Main = () => {
               onChange={(e) => setInput(e.target.value)}
               value={input}
               type="text"
+              onKeyDown={handleKeyDown}
               placeholder="Enter a prompt here"
             />
             <div>

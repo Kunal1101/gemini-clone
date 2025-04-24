@@ -16,11 +16,13 @@ const ContextProvider = (props) => {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   };
+
   const onSend = async () => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
     setRecentPrompt(input);
+    setInput("");
     const response = await main(input);
     let responseArray = response.split("**");
     let newResponse;
@@ -38,7 +40,6 @@ const ContextProvider = (props) => {
       delayPara(i, nextWord + " ");
     }
     setLoading(false);
-    setInput("");
   };
 
   const contextValue = {
