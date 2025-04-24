@@ -42,7 +42,7 @@ const Main = () => {
         <div className="cards">
           {cardData.map((card) => {
             return (
-              <div id={card.id} className="card">
+              <div key={card.id} className="card">
                 <p>{card.sample_question}</p>
                 <img src={card.icon} alt="" />
               </div>
